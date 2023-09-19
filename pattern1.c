@@ -9,11 +9,15 @@ int main()
     printf("Enter no of rows: \n");
     scanf("%d", &row);
 
-    for (int i = 1; i <= row; i++) //iterates rows
+    for (int i = 0; i < row; i++) // i iterates rows
     {
-        for (int j = 0; j < i; j++)  //iterates no of * in a row
+        for (int j = 0; j <= i; j++) // j iterates columns
         {
-            printf("* ");
+            if (i+j >=(row-1))
+            {printf("* ");}
+
+            else if(i!=j) 
+            {printf("# ");}
         }
         printf("\n");
     }
